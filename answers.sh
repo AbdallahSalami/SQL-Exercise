@@ -19,3 +19,35 @@ SELECT * FROM students;
 7- UPDATE students SET Points = Points - 4 WHERE Name = 'Alex';
 
 SELECT * FROM students ;  
+
+
+
+
+
+
+
+
+----------------
+graduates table (if you want):
+---------------
+CREATE TABLE graduates (
+ID  Integer  PRIMARY KEY AUTOINCREMENT NOT NULL,
+Name Text  NOT NULL  UNIQUE ,
+Age Integer ,
+Gender Text ,
+Points Integer , 
+Graduation Text 
+);
+
+INSERT Into graduates VALUES (1,"Layal" , 18 , "F" , 350 , "graduates");
+SELECT * FROM graduates;
+
+
+SELECT * FROM students;
+delete FROM students where Name="Layal";
+SELECT * FROM students;
+
+
+SELECT * FROM graduates;
+
+------------------------------------------------------------------------
