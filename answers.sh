@@ -30,7 +30,7 @@ SELECT * FROM students ;
 ----------------
 graduates table (if you want):
 ---------------
-CREATE TABLE graduates (
+9-CREATE TABLE graduates (
 ID  Integer  PRIMARY KEY AUTOINCREMENT NOT NULL,
 Name Text  NOT NULL  UNIQUE ,
 Age Integer ,
@@ -39,7 +39,7 @@ Points Integer ,
 Graduation Text 
 );
 
-INSERT Into graduates VALUES (1,"Layal" , 18 , "F" , 350 , "graduates");
+10-INSERT Into graduates VALUES (1,"Layal" , 18 , "F" , 350 , "graduates");
 SELECT * FROM graduates;
 
 
@@ -51,3 +51,22 @@ SELECT * FROM students;
 SELECT * FROM graduates;
 
 ------------------------------------------------------------------------
+join:
+----
+
+14- SELECT employees.Name AS EmployeeName, companies.Name AS CompanyName, companies.Date AS CompanyDate
+FROM employees
+JOIN companies ON employees.company = CompanyName;
+
+
+15- SELECT employees.Name AS EmployeeName
+FROM employees
+JOIN companies ON employees.company = companies.Name
+WHERE companies.Date < 2000;
+
+16- SELECT companies.Name AS CompanyName
+FROM employees
+JOIN companies ON employees.company = CompanyName
+WHERE employees.Role = 'Graphic Designer';
+
+
