@@ -70,3 +70,26 @@ JOIN companies ON employees.company = CompanyName
 WHERE employees.Role = 'Graphic Designer';
 
 
+-------------------------------------------------------
+Count & Filter:
+-----------------
+18- SELECT Name
+FROM students
+WHERE Points = (SELECT MAX(Points) FROM students);
+
+19- SELECT AVG(Points) AS AveragePoints
+FROM students;
+
+20- SELECT COUNT(*) AS NumberOfStudents
+FROM students
+WHERE Points = 500;
+
+21-SELECT Name
+FROM students
+WHERE Name LIKE '%s%';
+
+22- SELECT Name, Points
+FROM students
+ORDER BY Points DESC;
+
+-------------------------
